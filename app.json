@@ -1,0 +1,17 @@
+{
+  "name": "UdacityFitness",
+  "displayName": "UdacityFitness",
+  "expo": {
+    "name": "UdacityFitness",
+    "slug": "UdacityFitness",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
