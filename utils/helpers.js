@@ -1,5 +1,5 @@
 import React from 'react'
-import View from 'react-native'
+import { View } from 'react-native'
 import { FontAwesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
 import { white } from './colors'
 
@@ -54,13 +54,15 @@ export function isBetween (num, x, y) {
         step: 1,
         type: 'steppers',
         getIcon() {
-          return <View>
-            <MaterialIcons
-              name='directions-run'
-              color={'black'}
-              size={35}
-            />
-          </View>
+          return (
+            <View>
+              <MaterialIcons
+                name='directions-run'
+                color={'black'}
+                size={35}
+              />
+            </View>
+          )
         }
       },
       bike: {
@@ -70,13 +72,15 @@ export function isBetween (num, x, y) {
         step: 1,
         type: 'steppers',
         getIcon() {
-          return <View>
-            <MaterialCommunityIcons
-              name='bike'
-              color={'black'}
-              size={35}
-            />
-          </View>
+          return (
+            <View>
+              <MaterialCommunityIcons
+                name='bike'
+                color={'black'}
+                size={35}
+              />
+            </View>
+          )
         }
       },
       swim: {
@@ -86,13 +90,15 @@ export function isBetween (num, x, y) {
         step: 100,
         type: 'steppers',
         getIcon() {
-          return <View>
-            <MaterialCommunityIcons
-              name='swim'
-              color={'black'}
-              size={35}
-            />
-          </View>
+          return (
+            <View>
+              <MaterialCommunityIcons
+                name='swim'
+                color={'black'}
+                size={35}
+              />
+            </View>
+          )
         }
       },
       sleep: {
@@ -102,13 +108,15 @@ export function isBetween (num, x, y) {
         step: 1,
         type: 'slider',
         getIcon() {
-          return <View>
-            <FontAwesome
-              name='bed'
-              color={'black'}
-              size={35}
-            />
-          </View>
+          return (
+            <View>
+              <FontAwesome
+                name='bed'
+                color={'black'}
+                size={35}
+              />
+            </View>
+          )
         }
       },
       eat: {
@@ -118,18 +126,23 @@ export function isBetween (num, x, y) {
         step: 1,
         type: 'slider',
         getIcon() {
-          return <View>
-            <MaterialCommunityIcons
-              name='food'
-              color={'black'}
-              size={35}
-            />
-          </View>
+          return (
+            <View>
+              <MaterialCommunityIcons
+                name='food'
+                color={'black'}
+                size={35}
+              />
+            </View>
+          )
         }
       }
     }
 
-    return type metric === 'undefined'
+    const toReturn= typeof metric === 'undefined'
       ? info
       : info[metric]
+
+    console.log("toReturn: ", toReturn)
+    return toReturn
   }
