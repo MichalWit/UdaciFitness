@@ -1,12 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  );
+class App extends React.Component {
+
+  componentDidMount() {
+    console.log("b")
+    debugger
+    console.log("a")
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Ionicons name='ios-pizza'/>
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -17,3 +27,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App
