@@ -146,3 +146,9 @@ export function isBetween (num, x, y) {
     console.log("toReturn: ", toReturn)
     return toReturn
   }
+
+  export function getDailyReminderValue() {
+    return {
+      today: "✍ Don't forget to log your data today."
+    }
+  }
