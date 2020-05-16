@@ -6,6 +6,7 @@ import UdaciSteppers from './UdaciSteppers'
 import DateHeader from './DateHeader'
 import { Ionicons } from '@expo/vector-icons'
 import TextButton from './TextButton'
+import { submitEntry, removeEntry } from '../utils/Api'
 
 function SubmitBtn({ onPress }) {
     return (
@@ -73,7 +74,7 @@ class AddEntry extends Component {
 
         // TODO: Navigate to home
 
-        // TODO: Save to DB
+        submitEntry({ entry, key })
 
         // TODO: Clear the lcal notification
     }
@@ -85,7 +86,7 @@ class AddEntry extends Component {
 
         // TODO: Navigate to home
 
-        // TODO: Save to DB
+        removeEntry(key)
     }
 
     render() {
